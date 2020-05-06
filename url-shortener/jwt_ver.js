@@ -7,7 +7,7 @@ module.exports =
     Verification: function (header_value)
     {
         return new Promise ((resolve, reject) => {
-            http.get('http://127.0.0.1:20000/user/token', async (res) => {
+            http.get('http://localhost:2000/user/token', async (res) => {
                 if (res.statusCode == 200) {
                     // Get JWT from response header
                     const loginToken = res.headers['x-access-token'];
