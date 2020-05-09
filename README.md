@@ -11,7 +11,7 @@ docker build -t <your username>/user-service .
 
 **Run container from image**
 ```
-docker run --name user-service -p 20000:2000 -d <your username>/user-service
+docker run --name user-service -p 2000:2000 -d <your username>/user-service
 ```
 
 ## URl shortener
@@ -25,7 +25,7 @@ docker build -t <your username>/url-shortener .
 
 **Run container from image**
 ```
-docker run --name url-shortener -p 40000:4000 -d <your username>/url-shortener
+docker run --name url-shortener -p 4000:4000 -d <your username>/url-shortener
 ```
 
 ## Test containers
