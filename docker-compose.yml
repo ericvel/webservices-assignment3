@@ -1,0 +1,25 @@
+version: "3"
+services:
+  user-service:
+    build: ./user
+    image: ericvel/user-service
+    container_name: user-service
+    ports:
+        - "2000:2000"
+    networks:
+      static-network:
+        ipv4_address: 172.20.20.1
+  url-shortener:
+    build: ./url-shortener
+    image: ericvel/url-shortener
+    container_name: url-shortener
+    ports:
+        - "4000:4000"
+    networks:
+      static-network:
+        ipv4_address: 172.20.20.2
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
