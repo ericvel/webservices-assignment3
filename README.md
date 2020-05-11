@@ -1,6 +1,15 @@
 # Web Services and Cloud-Based Systems - Assignment 3
 
+Install Docker Compose
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
 ## Build and run containers using Compose
+
 ```
 docker-compose up -d
 ```
