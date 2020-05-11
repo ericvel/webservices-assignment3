@@ -11,7 +11,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ## Build and run containers using Compose
 
 ```
-docker-compose up -d
+sudo docker-compose up -d
 ```
 - The user service runs on http://localhost:2000
 - The URL shortener runs on http://localhost:4000
