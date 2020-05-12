@@ -1,0 +1,27 @@
+---
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: user-shortener-service-depl
+   labels:
+     app: web
+ spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: web
+   template:
+     metadata:
+       labels:
+         app: web
+     spec:
+       containers:
+         - name: url-shortener
+           image: ericvel/url-shortener
+           ports:
+             - containerPort: 4000
+         - name: user-service
+           image: ericvel/user-service
+           ports:
+             - containerPort: 2000
+
